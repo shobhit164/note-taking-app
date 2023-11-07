@@ -6,12 +6,12 @@ import UserSidebar from "./components/UserSidebar";
 import "./App.css";
 
 function App() {
-  const [take, setTake] = useState(false);
   const [input, setInput] = useState(false);
-  const [userName, setUserName] = useState("");
-  const [userColor, setUserColor] = useState("");
-  const [users, setUsers] = useState([]);
   const [id, setId] = useState(0);
+  const [userName, setUserName] = useState("");
+  const [users, setUsers] = useState([]);
+  const [take, setTake] = useState(false);
+  const [userColor, setUserColor] = useState("");
 
   const userNameRef = useRef();
   const [color1, setColor1] = useState(false);
@@ -72,8 +72,8 @@ function App() {
       <div className="wrapper">
         <div className="highlight" style={{ display: input ? "flex" : "none" }}>
           <div className="main_group">
-            <p className="p">Create New Notes group</p>
-            <span className="name">
+            <p className="heading">Create New Notes group</p>
+            <span className="grp_name">
               Group Name{" "}
               <input
                 ref={userNameRef}
@@ -83,7 +83,7 @@ function App() {
               />
             </span>
 
-            <div className="colors">
+            <div className="magic_colors">
               <span>Choose colour</span>
               <span
                 onClick={() => {

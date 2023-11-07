@@ -91,7 +91,7 @@ const WriteArea = ({ users }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <header>
         <img onClick={handleBack} src={backicon} alt="" />
         <div style={{ pointerEvents: "none" }}>
