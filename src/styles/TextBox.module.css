@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  margin-left: 3.2%;
+}
+
+.wrapper > p {
+  width: 40rem;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 1.12rem;
+  line-height: 1.4rem;
+}
+
+.stamp {
+  font-family: roboto;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.92rem;
+  line-height: 1.22rem;
+  margin-right: 3.2%;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper > p {
+    width: 50%;
+  }
+
+  .stamp {
+    margin-right: 10%;
+  }
+}

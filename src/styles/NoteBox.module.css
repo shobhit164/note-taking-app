@@ -1,0 +1,30 @@
+.wrapper{
+  height: 4.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  border-top-left-radius: 1.5rem;
+  position: relative;
+  border-bottom-left-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.round{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  margin-right: 1.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.wrapper > p{
+  font-size: 1.06rem;
+}
+
+.active{
+  background-color: #F7ECDC;
+}

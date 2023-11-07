@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Inter:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Roboto:wght@400;500&family=Single+Day&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  height: 100vh;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.wrapper {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.avatar {
+  height: 100vh;
+  width: 75%;
+}
+
+.userSidebar {
+  height: 100vh;
+  width: 25%;
+}
+
+.highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.main_group {
+  height: 15rem;
+  width: 35rem;
+  background-color: #fff;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.selected_color {
+  border: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.color1 {
+  background-color: #b38bfa;
+}
+
+.color1:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #b38bfa);
+}
+
+.color2 {
+  background-color: #ff79f2;
+}
+
+.color2:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #ff79f2);
+}
+
+.color3 {
+  background-color: #43e6fc;
+}
+
+.color3:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #43e6fc);
+}
+
+.color4 {
+  background-color: #f19576;
+}
+
+.color4:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #f19576);
+}
+
+.color5 {
+  background-color: #0047ff;
+}
+
+.color5:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #0047ff);
+}
+
+.color6 {
+  background-color: #6691ff;
+}
+
+.color6:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #6691ff);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.main_group > span,
+.main_group > div > span {
+  margin-right: 5%;
+}
+
+.main_group > div {
+  display: flex;
+}
+
+.p {
+  padding-left: 4%;
+}
+
+.name,
+.colors {
+  padding-left: 6%;
+}
+
+.main_group > span {
+  width: 100%;
+  display: block;
+}
+
+.main_group > span > input {
+  height: 2.5rem;
+  width: 55%;
+  padding-left: 2%;
+  margin-left: 3%;
+  border-radius: 0.8rem;
+  border: 1px solid #cccccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.main_group > div > .div {
+  display: inline-block;
+  margin-right: 2%;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.main_group > div > button {
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #fff;
+  height: 2rem;
+  width: 7.5rem;
+  background-color: black;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+  right: 3%;
+}
+
+.main_group > div > button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn_section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 500px) {
+  .main_group {
+    height: 17rem;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main_group > div > .div {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .main_group > div > button {
+    width: 17rem;
+    height: 3rem;
+    right: 0%;
+    font-size: 1.5rem;
+  }
+
+  .main_group > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .p,
+  .name,
+  .colors {
+    padding-left: 3%;
   }
 }

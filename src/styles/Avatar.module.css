@@ -1,0 +1,57 @@
+.wrapper {
+  background-color: #f7ecdc;
+  height: 100%;
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  bottom: 5%;
+}
+
+.contentWrapper > img {
+  height: 15rem;
+  width: 30rem;
+}
+
+.overview,
+.header,
+.footer {
+  font-weight: 400;
+  font-family: roboto;
+  width: 29rem;
+  text-align: center;
+}
+
+.overview {
+  color: #292929;
+  font-size: 1.01rem;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > span {
+  position: relative;
+  top: 6%;
+}
+
+.footer > img {
+  margin-right: 2%;
+}
+
