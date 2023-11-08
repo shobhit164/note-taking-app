@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes,Route,useNavigate} from "react-router-dom";
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import Avatar from "./components/Avatar";
 import WriteArea from "./components/WriteArea";
@@ -31,7 +31,7 @@ function App() {
     }
   }, []);
 
-  const createNote = () => {
+  const makeNote = () => {
     if (userName !== "" && userColor !== "") {
       setTake(!take);
       setInput(false);
@@ -159,7 +159,7 @@ function App() {
               ></span>
             </div>
             <div className="btn_section">
-              <button onClick={createNote}>Create</button>
+              <button onClick={makeNote}>Create</button>
             </div>
           </div>
         </div>

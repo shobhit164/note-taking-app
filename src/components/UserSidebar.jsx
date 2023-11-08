@@ -33,8 +33,8 @@ const UserSidebar = ({ isMobile, take, setInput }) => {
                 username={user.userName}
                 shortname={user.shortName}
                 usercolor={user.userColor}
-                isSelected={selectedNoteId === user.id}
-                onSelect={() => handleNoteSelect(user.id)}
+                isPicked={selectedNoteId === user.id}
+                onGet={() => handleNoteSelect(user.id)}
               />
             ))}
           </div>

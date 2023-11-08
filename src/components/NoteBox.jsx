@@ -4,20 +4,19 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/NoteBox.module.css";
 
 const NoteBox = (props) => {
-  const { isMobile, id, username, shortname, usercolor, isSelected, onSelect } =
-    props;
+  const { id, username, shortname, isPicked, onGet, usercolor } = props;
 
   const navigate = useNavigate();
   const [background, setBackground] = useState(false);
 
   const handleOnClick = () => {
     setBackground(!background);
-    onSelect();
+    onGet();
     navigate(`/write/${id}`);
   };
 
   const wrapperStyle = {
-    backgroundColor: isSelected ? "#F7ECDC" : "",
+    backgroundColor: isPicked ? "#F7ECDC" : "",
   };
 
   const roundStyle = {
