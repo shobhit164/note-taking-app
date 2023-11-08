@@ -31,30 +31,31 @@ function App() {
     }
   }, []);
 
-  const makeNote = () => {
-    if (userName !== "" && userColor !== "") {
-      setTake(!take);
-      setInput(false);
-      const newUser = {
-        id: id,
-        userName: userName,
-        userColor: userColor,
-        shortName: userName[0] + userName[1],
-      };
-      setId(id + 1);
-      userNameRef.current.value = "";
-      setColor1(false);
-      setColor2(false);
-      setColor3(false);
-      setColor4(false);
-      setColor5(false);
-      setColor6(false);
-      const newUsers = [...users, newUser];
-      setUsers(newUsers);
+const makeNote = () => {
+  if (userName && userName.length >= 1 && userColor) {
+    setTake(!take);
+    setInput(false);
+    const newUser = {
+      id: id,
+      userName: userName,
+      userColor: userColor,
+      shortName: userName.slice(0, 2).toUpperCase(),
+    };
+    setId(id + 1);
+    userNameRef.current.value = "";
+    setColor1(false);
+    setColor2(false);
+    setColor3(false);
+    setColor4(false);
+    setColor5(false);
+    setColor6(false);
+    const newUsers = [...users, newUser];
+    setUsers(newUsers);
 
-      localStorage.setItem("users", JSON.stringify(newUsers));
-    }
-  };
+    localStorage.setItem("users", JSON.stringify(newUsers));
+  }
+};
+
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
   useEffect(() => {
